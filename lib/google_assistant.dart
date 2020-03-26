@@ -72,7 +72,7 @@ class _GoogleAssistant extends State<GoogleAssistant> {
   void Response(query) async {
     _textController.clear();
     AuthGoogle authGoogle =
-        await AuthGoogle(fileJson: "Asset Your File Json").build();
+        await AuthGoogle(fileJson: 'img/covid-19-hapalo-51419dae324d.json').build();
     Dialogflow dialogflow =
         Dialogflow(authGoogle: authGoogle, language: Language.english);
     AIResponse response = await dialogflow.detectIntent(query);
@@ -102,7 +102,7 @@ class _GoogleAssistant extends State<GoogleAssistant> {
     _textController.clear();
     SimpleMessage message = new SimpleMessage(
       text: text,
-      name: "Rances",
+      name: "",
       type: true,
     );
     setState(() {

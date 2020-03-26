@@ -42,11 +42,11 @@ class _PageDialogflowV1 extends State<PageDialogflowV1> {
 
   void Response(query) async {
     _textController.clear();
-    Dialogflow dialogflow =Dialogflow(token: "Your Token");
+    Dialogflow dialogflow =Dialogflow(token: "05f6fc80bc634f41bd9d71e557e52ee0");
     AIResponse response = await dialogflow.sendQuery(query);
     ChatMessage message = new ChatMessage(
       text: response.getMessageResponse(),
-      name: "Bot",
+      name: "Covid Bot",
       type: false,
     );
     setState(() {
