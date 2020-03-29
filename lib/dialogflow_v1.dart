@@ -40,7 +40,7 @@ class _PageDialogflowV1 extends State<PageDialogflowV1> {
     );
   }
 
-  void Response(query) async {
+  void response(query) async {
     _textController.clear();
     Dialogflow dialogflow =Dialogflow(token: "05f6fc80bc634f41bd9d71e557e52ee0");
     AIResponse response = await dialogflow.sendQuery(query);
@@ -58,13 +58,13 @@ class _PageDialogflowV1 extends State<PageDialogflowV1> {
     _textController.clear();
     ChatMessage message = new ChatMessage(
       text: text,
-      name: "Rances",
+      name: "User",
       type: true,
     );
     setState(() {
       _messages.insert(0, message);
     });
-    Response(text);
+    response(text);
   }
 
   @override

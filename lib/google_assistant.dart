@@ -69,7 +69,7 @@ class _GoogleAssistant extends State<GoogleAssistant> {
     return null;
   }
 
-  void Response(query) async {
+  void response(query) async {
     _textController.clear();
     AuthGoogle authGoogle =
         await AuthGoogle(fileJson: 'img/covid-19-hapalo-51419dae324d.json').build();
@@ -108,7 +108,7 @@ class _GoogleAssistant extends State<GoogleAssistant> {
     setState(() {
       _messages.insert(0, message);
     });
-    Response(text);
+    response(text);
   }
 
   @override
@@ -117,7 +117,7 @@ class _GoogleAssistant extends State<GoogleAssistant> {
     return new Scaffold(
       backgroundColor: Color(0xf4f4f4f4f4),
       appBar: new AppBar(
-        title: new Text("Google Assistant"),
+        title: new Text("Uncovid Bot"),
         backgroundColor: Colors.blue,
       ),
       body: new Column(children: <Widget>[

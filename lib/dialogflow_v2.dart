@@ -41,7 +41,7 @@ class _HomePageDialogflowV2 extends State<HomePageDialogflowV2> {
     );
   }
 
-  void Response(query) async {
+  void response(query) async {
     _textController.clear();
     AuthGoogle authGoogle = await AuthGoogle(fileJson: 'img/covid-19-hapalo-51419dae324d.json').build();
     Dialogflow dialogflow =Dialogflow(authGoogle: authGoogle,language: Language.english);
@@ -66,14 +66,14 @@ class _HomePageDialogflowV2 extends State<HomePageDialogflowV2> {
     setState(() {
       _messages.insert(0, message);
     });
-    Response(text);
+    response(text);
   }
 
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("Dialogflow V2"),
+        title: new Text("Uncovid Bot"),
       ),
       body: new Column(children: <Widget>[
         new Flexible(
